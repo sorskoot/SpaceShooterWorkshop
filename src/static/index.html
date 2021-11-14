@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,27 @@
     <title>Space Shooter Workshop</title>
     <script src="Shooter.js"></script>
 </head>
+
 <body>
     <a-scene>
         <a-assets>
             <a-asset-item id="blaster" src="models/blasterG.glb"></a-asset-item>
+            <a-asset-item id="emeny" src="models/spitfire.glb"></a-asset-item>
         </a-assets>
-        <a-box position="-1 0.5 1" rotation="0 45 0" color="#4CC3D9" ></a-box>
-        <a-sphere position="0 1 -2" radius="1" color="blue" ></a-sphere>
-        <a-cylinder position="1 0.75 0" radius="0.5" height="2" color="red" ></a-cylinder>
-        <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" ></a-plane>
-    <a-entity shoot="hand:left">
-        <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
-    </a-entity>
-    <a-entity shoot="hand:right">
-        <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
-    </a-entity>
+        <a-sky color="black"></a-sky>
+        <a-entity>
+            <a-entity class="enemy" enemy position="0 10 -50" gltf-model="#emeny"></a-entity>
+        </a-entity>
+        <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-entity shoot="hand:left">
+            <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
+        </a-entity>
+        <a-entity shoot="hand:right">
+            <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
+        </a-entity>
     </a-scene>
 
 
 </body>
+
 </html>
