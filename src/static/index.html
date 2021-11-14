@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script crossorigin="anonymous" src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="Shooter.js"></script>
 </head>
 <body>
     <a-scene>
@@ -13,8 +13,14 @@
         <a-sphere position="0 1 -2" radius="1" color="blue" ></a-sphere>
         <a-cylinder position="1 0.75 0" radius="0.5" height="2" color="red" ></a-cylinder>
         <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" ></a-plane>
+    <a-entity shoot="hand:left">
+
+    </a-entity>
+    <a-entity shoot="hand:right">
+
+    </a-entity>
     </a-scene>
 
-    <script src="Shooter.js"></script>
+
 </body>
 </html>
