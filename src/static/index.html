@@ -14,17 +14,29 @@
         <a-assets>
             <a-asset-item id="blaster" src="models/blasterG.glb"></a-asset-item>
             <a-asset-item id="emeny" src="models/spitfire.glb"></a-asset-item>
+            <a-asset-item id="base" src="models/base.glb"></a-asset-item>
+            <img id="space-texture" src="space.jpg"/>
+
+            <a-mixin id="bullet" material="color:red" geometry="primitive:sphere;radius:.05"></a-mixin>
         </a-assets>
-        <a-sky color="black"></a-sky>
+        <a-sky material="src: #space-texture"></a-sky>
         <a-entity>
             <a-entity class="enemy" enemy position="0 10 -50" gltf-model="#emeny"></a-entity>
         </a-entity>
         <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-        <a-entity shoot="hand:left">
+        <a-entity id="missile-group">
+        <a-entity gltf-model="#base"></a-entity>
+        </a-entity>
+        <a-entity shoot="hand:left" gun>
             <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
         </a-entity>
-        <a-entity shoot="hand:right">
+        <a-entity shoot="hand:right" gun>
             <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
+        </a-entity>
+        <a-light light="intensity: .5s type: ambient" ></a-light>
+        <a-light position="-2 2 2" light="intensity: 2; type: point"></a-light>
+        <a-light position="2 2 2" light="intensity: 2; type: point"></a-light>
+        <a-entity position="0 1.7 0" camera look-controls="pointerLockEnabled:true">
         </a-entity>
     </a-scene>
 </body>

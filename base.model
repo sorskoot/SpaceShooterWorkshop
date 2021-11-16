@@ -1,0 +1,21 @@
+# Made using Asset Forge (2.2.0)
+
+:materials
+
+[name:Main;color:RGBA(0.322, 0.322, 0.322, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:DarkGrey;color:RGBA(0.192, 0.192, 0.192, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:Accent;color:RGBA(0.157, 0.053, 0.448, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:DarkAccent;color:RGBA(0.036, 0.024, 0.181, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:Black;color:RGBA(0.034, 0.034, 0.034, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+
+:models
+
+[name:;collection:Ultimate Modular Sci-Fi - Feb 2021;type:FloorTile_Corner;position:(2.0000, 0.0000, -2.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:Accent+DarkAccent+Black+Main+DarkGrey;]
+[name:;collection:Ultimate Modular Sci-Fi - Feb 2021;type:FloorTile_Corner;position:(-2.0000, 0.0000, -2.0000);rotation:(0.0000, 90.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:Accent+DarkAccent+Black+Main+DarkGrey;]
+[name:;collection:Ultimate Modular Sci-Fi - Feb 2021;type:FloorTile_Basic;position:(0.0000, 0.0000, 0.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:Main+DarkGrey;]
+[name:;collection:Ultimate Modular Sci-Fi - Feb 2021;type:FloorTile_Corner;position:(-2.0000, 0.0000, 2.0000);rotation:(0.0000, 180.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:Accent+DarkAccent+Black+Main+DarkGrey;]
+[name:;collection:Ultimate Modular Sci-Fi - Feb 2021;type:FloorTile_Corner;position:(2.0000, 0.0000, 2.0000);rotation:(0.0000, 270.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:Accent+DarkAccent+Black+Main+DarkGrey;]
+[name:;collection:Ultimate Modular Sci-Fi - Feb 2021;type:FloorTile_Side;position:(2.0000, 0.0000, 0.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:Accent+DarkAccent+Black+Main+DarkGrey;]
+[name:;collection:Ultimate Modular Sci-Fi - Feb 2021;type:FloorTile_Side;position:(-2.0000, 0.0000, 0.0000);rotation:(0.0000, 180.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:Accent+DarkAccent+Black+Main+DarkGrey;]
+[name:;collection:Ultimate Modular Sci-Fi - Feb 2021;type:FloorTile_Side;position:(0.0000, 0.0000, -2.0000);rotation:(0.0000, 90.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:Accent+DarkAccent+Black+Main+DarkGrey;]
+[name:;collection:Ultimate Modular Sci-Fi - Feb 2021;type:FloorTile_Side;position:(0.0000, 0.0000, 2.0000);rotation:(0.0000, 270.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:Accent+DarkAccent+Black+Main+DarkGrey;]
