@@ -15,8 +15,7 @@
             <a-asset-item id="blaster" src="models/blasterG.glb"></a-asset-item>
             <a-asset-item id="emeny" src="models/spitfire.glb"></a-asset-item>
             <a-asset-item id="base" src="models/base.glb"></a-asset-item>
-            <img id="space-texture" src="space.jpg"/>
-
+            <img id="space-texture" src="space.jpg" />
             <a-mixin id="bullet" material="color:red" geometry="primitive:sphere;radius:.05"></a-mixin>
         </a-assets>
         <a-sky material="src: #space-texture"></a-sky>
@@ -25,19 +24,37 @@
         </a-entity>
         <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
         <a-entity id="missile-group">
-        <a-entity gltf-model="#base"></a-entity>
+            <a-entity gltf-model="#base"></a-entity>
         </a-entity>
-        <a-entity shoot="hand:left" gun>
-            <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
+        
+        <a-entity id="guns" visible-in-vr>
+            <a-entity shoot="hand:left" gun>
+                <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
+            </a-entity>
+            <a-entity shoot="hand:right" gun>
+                <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
+            </a-entity>
         </a-entity>
-        <a-entity shoot="hand:right" gun>
-            <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
-        </a-entity>
-        <a-light light="intensity: .5s type: ambient" ></a-light>
+
+        <a-light light="intensity: .5s type: ambient"></a-light>
         <a-light position="-2 2 2" light="intensity: 2; type: point"></a-light>
         <a-light position="2 2 2" light="intensity: 2; type: point"></a-light>
+
         <a-entity position="0 1.7 0" camera look-controls="pointerLockEnabled:true">
+           
+            <a-entity visible-in-vr="visible:false" position="0 -.20 -.333">
+                <a-entity keyboardcontrols gun position="-0.35 0 0">
+                    <a-entity class="blaster" rotation="0 180 0" scale="0.5 0.5 0.5" gltf-model="#blaster">
+                    </a-entity>
+                </a-entity>
+                <a-entity keyboardcontrols gun position="0.35 0 0">
+                    <a-entity class="blaster" rotation="0 180 0" scale="0.5 0.5 0.5" gltf-model="#blaster">
+                    </a-entity>
+                </a-entity>
+            </a-entity>
         </a-entity>
+
     </a-scene>
 </body>
+
 </html>

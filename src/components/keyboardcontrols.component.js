@@ -7,7 +7,7 @@ AFRAME.registerComponent('keyboardcontrols', {
             if (e.code === 'Space' && !reload) {
                 reload = true;
                 // sending the button down event mimics the trigger being pressed
-                this.el.emit('buttondown', { id: 0, direction: this.getDirection() });
+                this.el.emit('fire', { id: 0, position: this.el.object3D.getWorldPosition() ,direction: this.getDirection() });
             }
         });
 
