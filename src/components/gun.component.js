@@ -6,13 +6,16 @@ AFRAME.registerComponent('gun', {
             this.spawnMissile(evt.detail.direction, evt.detail.position);
         })
     },
-    update (oldData) { },
-    spawnMissile (direction, position) {
+    update(oldData) { },
+    spawnMissile(direction, position) {
+        position.y += 0.5;
         let box = document.createElement("a-entity");
-        box.setAttribute("missile", { 
-            direction: direction, position: position });
-        box.setAttribute('mixin', 'bullet');
+        box.setAttribute("missile", {
+            direction: direction, position: position,speed:75
+        });
+        let bullet = document.createElement("a-entity");
+        bullet.setAttribute('mixin', 'bullet');
+        box.appendChild(bullet);
         this.missilegroup.appendChild(box);
     }
-
 });
