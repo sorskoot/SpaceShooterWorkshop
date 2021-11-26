@@ -34,7 +34,7 @@ AFRAME.registerComponent('shoot', {
                     z: v.z
                 }, position: {
                     x: this.el.object3D.position.x,
-                    y: this.el.object3D.position.y - 0.5,
+                    y: this.el.object3D.position.y,
                     z: this.el.object3D.position.z
                 }
             });

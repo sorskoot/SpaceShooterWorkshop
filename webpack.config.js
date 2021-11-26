@@ -21,6 +21,6 @@ module.exports = {
     },
     watchFiles: ['src/**/*'],
     compress: true,
-    port: 8080,
+    port: 1337,
   },
 };

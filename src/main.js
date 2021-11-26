@@ -1,4 +1,3 @@
-import 'aframe'
 import './components/shoot.component'
 import './components/keyboardcontrols.component'
 import './components/enemy.component'
@@ -6,3 +5,6 @@ import './components/selfdestruct.component'
 import './components/missile.component'
 import './components/gun.component'
 import './components/visible-in-vr.component'
+
+import './components/game.system'
+import './components/enemy-spawner.system'

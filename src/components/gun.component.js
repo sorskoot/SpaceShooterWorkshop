@@ -8,10 +8,9 @@ AFRAME.registerComponent('gun', {
     },
     update(oldData) { },
     spawnMissile(direction, position) {
-        position.y += 0.5;
         let box = document.createElement("a-entity");
         box.setAttribute("missile", {
-            direction: direction, position: position,speed:75
+            direction: direction, position: position,speed:75,target:'.enemy,.bomb'
         });
         let bullet = document.createElement("a-entity");
         bullet.setAttribute('mixin', 'bullet');
