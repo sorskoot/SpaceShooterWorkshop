@@ -1,6 +1,6 @@
 AFRAME.registerSystem('enemy-spawner', {
     schema: {},
-    init: function () {
+    init() {
         const root = document.getElementById('enemies');
         setInterval(()=>{
             let enemy = document.createElement('a-entity');
