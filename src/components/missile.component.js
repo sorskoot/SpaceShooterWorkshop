@@ -40,8 +40,7 @@ AFRAME.registerComponent('missile', {
         document.querySelectorAll(this.data.target).forEach((target) => {
             if (target.object3D.position.distanceTo(pos) < this.data.collisionDistance) {
                 this.collision = true;
-                target.setAttribute("selfdestruct", { timer: 1 });
-                this.el.setAttribute("selfdestruct", { timer: 1 })
+                this.el.sceneEl.systems['game'].collision(this.el, target);
                 return;
             }
         });

@@ -27,7 +27,8 @@ AFRAME.registerComponent('shoot', {
                 this.el.object3D.rotation.z, 'XYZ');
             let v = new THREE.Vector3(0, 0, 1);
             v.applyEuler(rot);
-            this.el.emit('fire', {
+            this.el.sceneEl.emit('buttondown', {
+                src:this.el,
                 direction: {
                     x: v.x,
                     y: v.y,

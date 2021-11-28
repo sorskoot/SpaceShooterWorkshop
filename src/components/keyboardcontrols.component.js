@@ -7,7 +7,7 @@ AFRAME.registerComponent('keyboardcontrols', {
             if (e.code === 'Space' && !reload) {
                 reload = true;
                 // sending the button down event mimics the trigger being pressed
-                this.el.emit('fire', { id: 0, position: this.el.object3D.getWorldPosition() ,direction: this.getDirection() });
+                this.el.sceneEl.emit('buttondown', { id: 0, src:this.el, position: this.el.object3D.getWorldPosition() ,direction: this.getDirection() });
             }
         });
 
@@ -15,7 +15,7 @@ AFRAME.registerComponent('keyboardcontrols', {
             if (e.code === 'Space') {
                 reload = false;
                 // sending the button down event mimics the trigger being released
-                this.el.emit('buttonup', { id: 0, direction: this.getDirection() });
+                this.el.sceneEl.emit('buttonup', { id: 0, src:this.el, direction: this.getDirection() });
             }
         });
     },
