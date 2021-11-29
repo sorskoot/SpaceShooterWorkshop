@@ -14,9 +14,7 @@ AFRAME.registerSystem('enemy-spawner', {
             root.appendChild(enemy);
         },6666);
     },
-    stopSpawning(){
-       
+    stopSpawning(){       
         clearInterval(this.timer);
-    }
- 
+    } 
  });
