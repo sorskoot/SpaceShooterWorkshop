@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter Workshop</title>
+    <script crossorigin="anonymous" src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="Shooter.js"></script>
+</head>
+
+<body>
+    <a-scene game enemy-spawner>
+        <a-assets>
+            <a-asset-item id="blaster" src="models/blasterG.glb"></a-asset-item>
+            <a-asset-item id="enemy-model" src="models/spitfire.glb"></a-asset-item>
+            <a-asset-item id="base" src="models/base.glb"></a-asset-item>
+            <a-asset-item id="bullet-model" src="models/bullet.glb"></a-asset-item>
+            <a-asset-item id="bomb-model" src="models/bomb.glb"></a-asset-item>
+            <img title="space" id="space-texture" src="space.jpg" />
+            <img title="title" id="title-texture" src="SpaceShooter.png" />
+            <img title="game-over" id="game-over-texture" src="Game-Over.png" />
+            <!-- <a-mixin id="bullet" material="color:red" geometry="primitive:sphere;radius:.05"></a-mixin> -->
+            <a-mixin id="enemy" gltf-model="#enemy-model" enemy></a-mixin>
+            <a-mixin id="bullet" gltf-model="#bullet-model" rotation="-90 0 0" scale=".1 .1 .1"></a-mixin>
+            <a-mixin id="bomb" gltf-model="#bomb-model" rotation="-90 0 0" scale=".3 .3 .3"></a-mixin>
+        </a-assets>
+        <a-sky material="src: #space-texture"></a-sky>
+        <a-entity id="enemies">
+
+        </a-entity>
+
+
+        <a-entity id="missile-group"></a-entity>
+        <a-entity id="bomb-group"></a-entity>
+
+        <a-entity gltf-model="#base" shadow="receive:true;cast:true"></a-entity>
+
+        <a-entity id="guns" visible-in-vr>
+            <a-entity shoot="hand:left" gun>
+                <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
+            </a-entity>
+            <a-entity shoot="hand:right" gun>
+                <a-entity class="blaster" rotation="0 180 0" scale=".5 .5 .5" gltf-model="#blaster"></a-entity>
+            </a-entity>
+        </a-entity>
+
+        <a-light light="intensity: .5s type: ambient"></a-light>
+        <a-light position="0 4 2" light="intensity: 2; type: point; castShadow: true"></a-light>
+        <a-light position="1.5 0.5 2" light="intensity: 0.75; type: point; color: #2b2a93"></a-light>
+
+        <a-entity id="title" position="0 2 -2.5">
+            <a-plane material="src: #title-texture; alphaTest: 0.99; flatShading: true; transparent: true; fog: false"
+                scale="4 1 4"></a-plane>
+        </a-entity>
+        <a-entity id="game-over" position="0 2 -2.5">
+            <a-plane
+                material="src: #game-over-texture; alphaTest: 0.99; flatShading: true; transparent: true; fog: false"
+                scale="4 1 4"></a-plane>
+        </a-entity>
+
+        <a-entity class="player" position="0 1.7 0" camera look-controls="pointerLockEnabled:true">
+
+            <a-entity visible-in-vr="visible:false" position="0 -.20 -.333">
+                <a-entity keyboardcontrols gun position="-0.35 0 0">
+                    <a-entity class="blaster" rotation="0 180 0" position="0 0 0" scale="0.5 0.5 0.5"
+                        gltf-model="#blaster">
+                    </a-entity>
+                </a-entity>
+                <a-entity keyboardcontrols gun position="0.35 0 0">
+                    <a-entity class="blaster" rotation="0 180 0" position="0 0 0" scale="0.5 0.5 0.5"
+                        gltf-model="#blaster">
+                    </a-entity>
+                </a-entity>
+            </a-entity>
+        </a-entity>
+
+    </a-scene>
+</body>
+
+</html>
