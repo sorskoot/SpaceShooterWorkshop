@@ -1,0 +1,75 @@
+{
+	"1.0 Shooter:default scene": {
+		"scope": "html",
+		"prefix": "Shooter:default scene:1",
+		"body": [
+			"<a-scene>",
+			"   <a-box position=\"-1 0.5 1\" rotation=\"0 45 0\" color=\"#4CC3D9\" ></a-box>",
+			"   <a-sphere position=\"0 1 -2\" radius=\"1\" color=\"#EF2D5E\" ></a-sphere>",
+			"   <a-cylinder position=\"1 0.75 0\" radius=\"0.5\" height=\"2\" color=\"#FFC65D\" ></a-cylinder>",
+			"   <a-plane position=\"0 0 0\" rotation=\"-90 0 0\" width=\"4\" height=\"4\" color=\"#7BC8A4\" ></a-plane>",
+			"</a-scene>",
+		]
+	},
+	"2.1 Galaxy asset": {
+		"scope": "html",
+		"prefix": "Shooter:galaxy asset:2",
+		"body": [
+			"<a-assets>",
+			"   <img title=\"space\" id=\"space-texture\" src=\"space.jpg\" />",
+			"</a-assets>",
+		]
+	},
+	"2.2 Galaxy asset": {
+		"scope": "html",
+		"prefix": "Shooter:galaxy sky:3",
+		"body": [
+			"<a-sky material=\"src: #space-texture\"></a-sky>",
+		]
+	},
+	"3.1 Base asset": {
+		"scope": "html",
+		"prefix": "Shooter:base asset:4",
+		"body": [
+			"<a-asset-item id=\"base\" src=\"models/base.glb\"></a-asset-item>",
+		]
+	},
+	"3.2 Base asset": {
+		"scope": "html",
+		"prefix": "Shooter:base entity:5",
+		"body": [
+			"<a-entity gltf-model=\"#base\" shadow=\"receive:true;cast:true\"></a-entity>",
+		]
+	},
+	"4.1 Lights": {
+		"scope": "html",
+		"prefix": "Shooter:lights:6",
+		"body": [
+			"<a-light light=\"intensity: .5s type: ambient\"></a-light>",
+			"<a-light position=\"0 4 2\" light=\"intensity: 2; type: point; castShadow: true\"></a-light>",
+			"<a-light position=\"1.5 0.5 2\" light=\"intensity: 0.75; type: point; color: #2b2a93\"></a-light>"
+		]
+	},
+	"5.1 Controllers": {
+		"scope": "html",
+		"prefix": "Shooter:Gun asset:7",
+		"body": [
+			"<a-asset-item id=\"blaster\" src=\"models/blasterG.glb\"></a-asset-item>",			
+		]
+	},
+	"5.2 Controllers": {
+		"scope": "html",
+		"prefix": "Shooter:Gun entity:8",
+		"body": [
+			" <a-entity class=\"blaster\" rotation=\"0 180 0\" scale=\".5 .5 .5\" gltf-model=\"#blaster\"></a-entity>"
+		]
+	},
+	"6.1 Guns on Desktop": {
+		"scope": "html",
+		"prefix": "Shooter:Desktop Gun Camera:9",
+		"body": [
+			"<a-entity class=\"player\" position=\"0 1.7 0\" camera look-controls=\"pointerLockEnabled:true\">",
+			"</a-entity>"
+		]
+	},
+}
