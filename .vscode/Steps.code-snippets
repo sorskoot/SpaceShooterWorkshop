@@ -1,75 +1,240 @@
 {
-	"1.0 Shooter:default scene": {
-		"scope": "html",
-		"prefix": "Shooter:default scene:1",
-		"body": [
-			"<a-scene>",
-			"   <a-box position=\"-1 0.5 1\" rotation=\"0 45 0\" color=\"#4CC3D9\" ></a-box>",
-			"   <a-sphere position=\"0 1 -2\" radius=\"1\" color=\"#EF2D5E\" ></a-sphere>",
-			"   <a-cylinder position=\"1 0.75 0\" radius=\"0.5\" height=\"2\" color=\"#FFC65D\" ></a-cylinder>",
-			"   <a-plane position=\"0 0 0\" rotation=\"-90 0 0\" width=\"4\" height=\"4\" color=\"#7BC8A4\" ></a-plane>",
-			"</a-scene>",
-		]
-	},
-	"2.1 Galaxy asset": {
-		"scope": "html",
-		"prefix": "Shooter:galaxy asset:2",
-		"body": [
-			"<a-assets>",
-			"   <img title=\"space\" id=\"space-texture\" src=\"space.jpg\" />",
-			"</a-assets>",
-		]
-	},
-	"2.2 Galaxy asset": {
-		"scope": "html",
-		"prefix": "Shooter:galaxy sky:3",
-		"body": [
-			"<a-sky material=\"src: #space-texture\"></a-sky>",
-		]
-	},
-	"3.1 Base asset": {
-		"scope": "html",
-		"prefix": "Shooter:base asset:4",
-		"body": [
-			"<a-asset-item id=\"base\" src=\"models/base.glb\"></a-asset-item>",
-		]
-	},
-	"3.2 Base asset": {
-		"scope": "html",
-		"prefix": "Shooter:base entity:5",
-		"body": [
-			"<a-entity gltf-model=\"#base\" shadow=\"receive:true;cast:true\"></a-entity>",
-		]
-	},
-	"4.1 Lights": {
-		"scope": "html",
-		"prefix": "Shooter:lights:6",
-		"body": [
-			"<a-light light=\"intensity: .5s type: ambient\"></a-light>",
-			"<a-light position=\"0 4 2\" light=\"intensity: 2; type: point; castShadow: true\"></a-light>",
-			"<a-light position=\"1.5 0.5 2\" light=\"intensity: 0.75; type: point; color: #2b2a93\"></a-light>"
-		]
-	},
-	"5.1 Controllers": {
-		"scope": "html",
-		"prefix": "Shooter:Gun asset:7",
-		"body": [
-			"<a-asset-item id=\"blaster\" src=\"models/blasterG.glb\"></a-asset-item>",			
-		]
-	},
-	"5.2 Controllers": {
-		"scope": "html",
-		"prefix": "Shooter:Gun entity:8",
-		"body": [
-			" <a-entity class=\"blaster\" rotation=\"0 180 0\" scale=\".5 .5 .5\" gltf-model=\"#blaster\"></a-entity>"
-		]
-	},
-	"6.1 Guns on Desktop": {
-		"scope": "html",
-		"prefix": "Shooter:Desktop Gun Camera:9",
-		"body": [
-			"<a-entity class=\"player\" position=\"0 1.7 0\" camera look-controls=\"pointerLockEnabled:true\">",
-			"</a-entity>"
-		]
-	},
+    "1.0 Shooter:default scene": {
+        "scope": "html",
+        "prefix": "Shooter:default scene:1",
+        "body": [
+            "<a-scene>",
+            "   <a-box position=\"-1 0.5 1\" rotation=\"0 45 0\" color=\"#4CC3D9\" ></a-box>",
+            "   <a-sphere position=\"0 1 -2\" radius=\"1\" color=\"#EF2D5E\" ></a-sphere>",
+            "   <a-cylinder position=\"1 0.75 0\" radius=\"0.5\" height=\"2\" color=\"#FFC65D\" ></a-cylinder>",
+            "   <a-plane position=\"0 0 0\" rotation=\"-90 0 0\" width=\"4\" height=\"4\" color=\"#7BC8A4\" ></a-plane>",
+            "</a-scene>",
+        ]
+    },
+    "2.1 Galaxy asset": {
+        "scope": "html",
+        "prefix": "Shooter:galaxy asset:2",
+        "body": [
+            "<a-assets>",
+            "   <img title=\"space\" id=\"space-texture\" src=\"space.jpg\" />",
+            "</a-assets>",
+        ]
+    },
+    "2.2 Galaxy asset": {
+        "scope": "html",
+        "prefix": "Shooter:galaxy sky:3",
+        "body": [
+            "<a-sky material=\"src: #space-texture\"></a-sky>",
+        ]
+    },
+    "3.1 Base asset": {
+        "scope": "html",
+        "prefix": "Shooter:base asset:4",
+        "body": [
+            "<a-asset-item id=\"base\" src=\"models/base.glb\"></a-asset-item>",
+        ]
+    },
+    "3.2 Base asset": {
+        "scope": "html",
+        "prefix": "Shooter:base entity:5",
+        "body": [
+            "<a-entity gltf-model=\"#base\" shadow=\"receive:true;cast:true\"></a-entity>",
+        ]
+    },
+    "4.1 Lights": {
+        "scope": "html",
+        "prefix": "Shooter:lights:6",
+        "body": [
+            "<a-light light=\"intensity: .5s type: ambient\"></a-light>",
+            "<a-light position=\"0 4 2\" light=\"intensity: 2; type: point; castShadow: true\"></a-light>",
+            "<a-light position=\"1.5 0.5 2\" light=\"intensity: 0.75; type: point; color: #2b2a93\"></a-light>"
+        ]
+    },
+    "5.1 Controllers": {
+        "scope": "html",
+        "prefix": "Shooter:Gun asset:7",
+        "body": [
+            "<a-asset-item id=\"blaster\" src=\"models/blasterG.glb\"></a-asset-item>",            
+        ]
+    },
+    "5.2 Controllers": {
+        "scope": "html",
+        "prefix": "Shooter:Gun entity:8",
+        "body": [
+            " <a-entity class=\"blaster\" rotation=\"0 180 0\" scale=\".5 .5 .5\" gltf-model=\"#blaster\"></a-entity>"
+        ]
+    },
+    "6.1 Guns on Desktop": {
+        "scope": "html",
+        "prefix": "Shooter:Desktop Gun Camera:9",
+        "body": [
+            "<a-entity class=\"player\" position=\"0 1.7 0\" camera look-controls=\"pointerLockEnabled:true\">",
+            "</a-entity>"
+        ]
+    },
+    "6.2 Guns on Desktop": {
+        "scope": "html",
+        "prefix": "Shooter:Desktop Guns:10",
+        "body": [
+        "<a-entity position=\"0 -.20 -.333\">",
+        "    <a-entity position=\"-0.35 0 0\">",
+        "        <a-entity class=\"blaster\" rotation=\"0 180 0\" position=\"0 0 0\" ",
+        "            scale=\"0.5 0.5 0.5\"",
+        "            gltf-model=\"#blaster\">",
+        "        </a-entity>",
+        "    </a-entity>",
+        "    <a-entity position=\"0.35 0 0\">",
+        "        <a-entity class=\"blaster\" rotation=\"0 180 0\" position=\"0 0 0\" ",
+        "            scale=\"0.5 0.5 0.5\"",
+        "            gltf-model=\"#blaster\">",
+        "        </a-entity>",
+        "    </a-entity>",
+        "</a-entity>",
+        ]
+    },
+    "7.1 Enemy Asset": {
+        "scope": "html",
+        "prefix": "Shooter:Enemy Asset:11",
+        "body": [
+        "<a-asset-item id=\"enemy-model\" src=\"models/spitfire.glb\"></a-asset-item>",        
+        ]
+    },
+    "7.2 Enemy Mixin": {
+        "scope": "html",
+        "prefix": "Shooter:Enemy Mixin:12",
+        "body": [
+        "<a-mixin id=\"enemy\" gltf-model=\"#enemy-model\" enemy></a-mixin>",        
+        ]
+    },
+    "7.3 Enemy Component Without Missile": {
+        "scope": "javascript",
+        "prefix": "Shooter:Enemy Component:13",
+        "body": [
+            "AFRAME.registerComponent('enemy', {",
+            "    schema: {},",
+            "    init: function () {        ",
+            "        this.t = 0;",
+            "        this.looptime = 12000;",
+            "",
+            "        this.path = [",
+            "            new THREE.Vector3(-100, -50, -200),",
+            "            new THREE.Vector3(50, 0, -150),",
+            "            new THREE.Vector3(-20, 10, -100),",
+            "            new THREE.Vector3(0, 20, 0),",
+            "            new THREE.Vector3(-80, 30, 40)",
+            "        ];",
+            "        this.curve = new THREE.CatmullRomCurve3(this.path, true);                ",
+            "    },",
+            "",
+            "    tick(time, timeDelta) {",
+            "        this.t += timeDelta;",
+            "        if (this.t > this.looptime) {",
+            "            this.t = 0;",
+            "        };",
+            "",
+            "        this.el.object3D.position.copy(",
+            "            this.curve.getPointAt(this.t / this.looptime)",
+            "        );",
+            "        this.el.object3D.lookAt(",
+            "            this.curve.getPointAt(Math.min(this.t / this.looptime + .001, 1))",
+            "        );        ",
+            "    }",
+            "",
+            "});",
+        ]
+    },
+    "8.1 Game System": {
+        "scope": "javascript",
+        "prefix": "Shooter:Game System:14",
+        "body": [
+            "AFRAME.registerSystem('game', {",
+            "    schema: {},",
+            "    init: function () {",
+            "        this.el.sceneEl.addEventListener('buttondown', (evt) => {",
+            "            evt.detail.src.emit('fire', {",
+            "                direction: evt.detail.direction,",
+            "                position: evt.detail.position",
+            "            });",
+            "        });",
+            "    },",
+            "    collision(a, b) {",
+            "        a.setAttribute('selfdestruct', { timer: 1 });",
+            "        b.setAttribute('selfdestruct', { timer: 1 })",
+            "    }",
+            "});",
+        ]
+    },
+    "9.1 Bullet Asset": {
+        "scope": "html",
+        "prefix": "Shooter:Bullet Asset:15",
+        "body": [
+            "<a-asset-item id=\"bullet-model\" src=\"models/bullet.glb\"></a-asset-item>"   
+        ]
+    },
+    "9.2 Bullet Mixin": {
+        "scope": "html",
+        "prefix": "Shooter:Bullet Mixin:16",
+        "body": [
+            "<a-mixin id=\"bullet\" gltf-model=\"#bullet-model\" rotation=\"-90 0 0\" scale=\".1 .1 .1\"></a-mixin>"   
+        ]
+    },
+   
+    "10.1 Bombs Collision":{
+        "scope": "javascript",
+        "prefix": "Shooter:Bombs Collision:17",
+        "body": [
+        "collision(a, b) {",
+        "    if (a.classList.contains('bomb')) {",
+        "       a.setAttribute('selfdestruct', { timer: 1 });",
+        "       this.gameover();",
+        "    }",
+        "    else {",
+        "       a.setAttribute('selfdestruct', { timer: 1 });",
+        "       b.setAttribute('selfdestruct', { timer: 1 })",
+        "    }",
+        " },",
+        " gameover(){",
+        "     console.log('game over');",
+        " }",
+        ]
+
+    },
+	"11.1 Bomb Asset": {
+        "scope": "html",
+        "prefix": "Shooter:Bomb Asset:18",
+        "body": [
+            "<a-asset-item id=\"bomb-model\" src=\"models/bomb.glb\"></a-asset-item>"   
+        ]
+    },
+    "11.2 Bomb Mixin": {
+        "scope": "html",
+        "prefix": "Shooter:Bomb Mixin:19",
+        "body": [
+            "<a-mixin id=\"bomb\" gltf-model=\"#bomb-model\" rotation=\"-90 0 0\" scale=\".3 .3 .3\"></a-mixin>"   
+        ]
+    },
+	"12.1 Title+Gameover Asset": {
+        "scope": "html",
+        "prefix": "Shooter:Title+GameOver Assets:20",
+        "body": [
+            "<img title=\"title\" id=\"title-texture\" src=\"SpaceShooter.png\" />",
+            "<img title=\"game-over\" id=\"game-over-texture\" src=\"Game-Over.png\" />"   
+        ]
+    },
+    "12.2 Title+Gameover Entities": {
+        "scope": "html",
+        "prefix": "Shooter:Title+GameOver Entities:21",
+        "body": [
+        "<a-entity id=\"title\" position=\"0 2 -2.5\">",
+        "    <a-plane material=\"src: #title-texture; alphaTest: 0.99; flatShading: true; transparent: true; fog: false\"",
+        "        scale=\"4 1 4\"></a-plane>",
+        "</a-entity>",
+        "<a-entity id=\"game-over\" position=\"0 2 -2.5\">",
+        "    <a-plane",
+        "        material=\"src: #game-over-texture; alphaTest: 0.99; flatShading: true; transparent: true; fog: false\"",
+        "        scale=\"4 1 4\"></a-plane>",
+        "</a-entity>",
+        ]
+    },
+    
 }
